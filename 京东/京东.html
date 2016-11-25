@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+   
+    <script src="jquery-3.1.0.js"></script>
+    <script src="cityJson.js"></script>
+    <script src="citySet.js"></script>
+    <script src="Popt.js"></script>
+    <script src="osSlider.js"></script>
+    <link rel="stylesheet" href="osSlider.css">
+    <link rel="stylesheet" href="jd.css">
+    <script src="jd.js"></script>
+    
+    
+</head>
+<body>
+    <div class="tips">
+        <div class="left">
+                <div id="song">送至:</div><div id="city">江苏</div>
+        </div>
+        <div class="middle"><div id="pass">你好,请登录</div><div id="register">免费注册</div> <div id="order">  |  我的订单</div><div id="mine"><a href="">  |  我的京东</a><div class="v">
+            <div class="v1">
+                  <div class="v1a">
+                     <img src="resource/no-img_mid_.jpg" >
+                  </div>
+                  <div class="v1b">
+                         <strong>你好，请登录</strong></br>
+                         优惠券 | 消息
+                  </div>             
+              </div>
+
+              <div class="v2">
+                  <div class="v2a">
+                <li ><a href="#">待处理订单</a></li>
+               <li ><a href="#">咨询回复</a></li>
+               <li ><a href="#">降价商品</a></li>
+               <li ><a href="#">返修退换货</a></li>
+                  </div>
+               <div class="v2b">
+              <li ><a href="#">我的关注</a></li>
+               <li ><a href="#">我的京东</a></li>
+               <li ><a href="#">我的理财</a></li>
+               <li ><a href="#">京东白条</a></li>
+               </div>   
+              </div>
+             
+            </div>
+            </div><div class="lin1">  |  京东会员</div><div class="lin2">  |  企业采购</div><div class="lin3">  |  手机京东</div><div class="lin4">  |  关注京东</div><div class="lin5">  |  客户服务</div><div class="lin6">  |  网站导航</div></div>
+    </div>
+    <div class="head">
+        <div class="left">
+            <img src="resource/jingdong.png" alt="www.jd.com">
+        </div>
+        <div class="right">
+            <input  class="text" type="text"><button class="btn">搜索</button>
+            <div class="word">
+                <a id="jd" href="">京东超市</a>
+                <a href="">家电秒杀</a>
+                <a href="">买3免1</a>
+                <a href="">1元拿走</a>
+                <a href="">明星直播</a>
+                <a href="">热水袋</a>
+                <a href="">羽绒服男</a>
+                <a href="">1元专享</a>
+                <a href="">戴尔</a>
+                </div>
+        </div>
+        </div>
+        <div class="tbody">
+            <div class="top">
+            <div class="title">
+                <div id="all"><a href="">全部商品分类</a></div>
+                <div id="other">
+                <a href="">服装城</a>
+                <a href="">美妆馆</a>
+                <a href="">京东超市</a>
+                <a href="">生鲜</a>
+                <a href="">全球购</a>
+                <a href="">闪购</a>
+                <a href="">团购</a>
+                <a href="">拍卖</a>
+                <a href="">金融</a>
+                </div>
+            </div>
+            </div>
+            <div class="middle">
+                <div class="kind kind1">
+                <div class="outer outer1">
+                  <a href="">&nbsp;家用电器</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">家电城</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+                
+            </div>
+             </div>
+              <div class="outer outer2">
+                  <a href="">&nbsp;手机、数码、京东通信</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">诺基亚</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+                
+            </div>
+             </div>
+               <div class="outer outer3">
+                  <a href="">&nbsp;电脑、办公</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">外星人</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+                
+            </div>
+             </div>
+              <div class="outer outer4">
+                  <a href="">&nbsp;家居、家具、家装、厨具</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">沙发</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+            </div>
+             </div>
+             <div class="outer outer5">
+                  <a href="">&nbsp;男装、女装、童装、内衣</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">沙发</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+            </div>
+             </div>
+             <div class="outer outer6">
+                  <a href="">&nbsp;个护化妆、清洁用品、宠物</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">沙发</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+            </div>
+             </div>
+             <div class="outer outer7">
+                  <a href="">&nbsp;鞋靴、箱包、珠宝、奢侈品</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">沙发</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+            </div>
+             </div>
+             <div class="outer outer8">
+                  <a href="">&nbsp;运动户外、钟表</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">沙发</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+            </div>
+             </div>
+             <div class="outer outer9">
+                  <a href="">&nbsp;汽车、汽车用品</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">沙发</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+            </div>
+             </div>
+             <div class="outer outer10">
+                  <a href="">&nbsp;母婴、玩具乐器</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">沙发</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+            </div>
+             </div>
+             <div class="outer outer11">
+                  <a href="">&nbsp;食品、酒类、生鲜、特产</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">沙发</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+            </div>
+             </div>
+             <div class="outer outer12">
+                  <a href="">&nbsp;医药保健</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">沙发</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+            </div>
+             </div>
+             <div class="outer outer13">
+                  <a href="">&nbsp;图书、音像、电子书</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">沙发</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+            </div>
+             </div>
+             <div class="outer outer14">
+                  <a href="">&nbsp;彩票、旅行、充值、票务</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">沙发</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+            </div>
+             </div>
+             <div class="outer outer15">
+                  <a href="">&nbsp;理财、众筹、白条、保险</a>
+                 
+                <div class="inner inner1">
+                <div class="top">
+                    <div class="elem elem1"><a href="">沙发</a></div>
+                     <div class="elem elem2"><a href="">品牌日</a></div>
+                      <div class="elem elem3"><a href="">智能生活馆</a></div>
+                       <div class="elem elem4"><a href="">京东净化馆</a></div>
+                        <div class="elem elem5"><a href="">家电众筹馆</a></div>
+                </div>
+            </div>
+             </div>
+        </div>
+        <div class="img">
+        <div class="slider"> 
+            <ul class="slider-main">
+                <li>
+                    <img src="resource/1.jpg" alt="">
+                </li>
+                <li>
+                    <img src="resource/2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="resource/3.jpg" alt="">
+                </li>
+                <li>
+                    <img src="resource/4.jpg" alt="">
+                </li>
+                <li>
+                    <img src="resource/5.jpg" alt="">
+                </li>
+                <li>
+                    <img src="resource/6.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div class="info">
+            <div class="title"><p>京东快报</p><a href="">更多</a></div>
+            <div class="ibody">
+                <a href=""><strong>[特惠]  </strong>中秋月饼爆款礼盒京东直降</a><br>
+                <a href=""><strong>[公告]  </strong>浙江地区订单配送可能延迟</a><br>
+                <a href=""><strong>[特惠]  </strong>中秋福利 买京东E卡返65元</a><br>
+                <a href=""><strong>[公告]  </strong>贵州扶贫馆 高原香茗邀你赏</a><br>
+                <a href=""><strong>[特惠]  </strong>家  电  五  折  秒  杀</a><br>
+            </div>
+            <div class="window">
+            <div class="botinfo">
+                <div class="top-botinfo">
+                    <div class="top-title"><div id="s1"><a href="">话费</a></div><div id="s2"><a href="">飞机</a></div><div id="s3"><a href="">电影票</a></div>
+                    <div id="s4"><a href="">游戏</a></div>
+                    </div>
+                    <div id="s5"><a href="">彩票</a></div>
+                    <div id="s6"><a href="">加油卡</a></div>
+                    <div id="s7"><a href="">酒店</a></div>
+                    <div id="s8"><a href="">火车票</a></div>
+                    <div id="s9"><a href="">众筹</a></div>
+                    <div id="s10"><a href="">理财</a></div>
+                    <div id="s11"><a href="">礼品卡</a></div>
+                    <div id="s12"><a href="">白条</a></div>
+                </div>
+            <div class="contai">
+                <ul>
+                    <li>话费</li><li>
+                    机票</li><li>
+                    电影票</li><li>
+                    游戏</li>
+                </ul>
+                <div class="main1">
+                    <div class="moveTop">X</div>
+                    <div class="cont">content1</div>
+                    <div class="cont">content2</div>
+                    <div class="cont">content3</div>
+                    <div class="cont">content4</div>
+                </div>
+            </div>
+            </div>
+            </div>
+            <div class="infoot"><img src="resource/a1.jpg" alt=""></div>
+        </div>
+            </div>
+            
+            <div class="tbootom">
+                <div class="left"><img src="resource/homebg.png" alt=""></div>
+                <div class="right">
+    <div class="dbbkr">
+        <div class="block">
+            <img src="resource/b1.jpg" alt="">
+            <img src="resource/b2.jpg" alt="">
+            <img src="resource/b3.jpg" alt="">
+            <img src="resource/b4.jpg" alt="">
+
+            <img src="resource/b5.jpg" alt="">
+            <img src="resource/b6.jpg" alt="">
+            <img src="resource/b7.jpg" alt="">
+            <img src="resource/b8.jpg" alt="">
+
+            <img src="resource/b9.jpg" alt="">
+            <img src="resource/b10.jpg" alt="">
+            <img src="resource/b11.jpg" alt="">
+            <img src="resource/b12.jpg" alt="">
+
+            <img src="resource/b1.jpg" alt="">
+            <img src="resource/b2.jpg" alt="">
+            <img src="resource/b3.jpg" alt="">
+            <img src="resource/b4.jpg" alt="">
+        </div>
+        <div class="btn1 prev">
+            <img src="img/039.png" alt="">
+        </div>
+        <div class="btn1 next">
+            <img src="img/040.png" alt="">
+    </div>
+            </div> 
+                </div>
+                <div class="titleword">猜你喜欢</div>
+            <div class="like">
+                <div class="left">
+                    <ul class="ul1">
+                        <li><a href="">鞋柜达人</a></li>
+                        <li><a href="">衣装丽人</a></li>
+                        <li><a href="">爪机党</a></li>
+                    </ul>
+                     <ul class="ul2">
+                        <li><a href="">休闲小食</a></li>
+                        <li><a href="">甜蜜零食</a></li>
+                        <li><a href="">智能家居</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            </div>
+        </div>
+</body>
+</html>
