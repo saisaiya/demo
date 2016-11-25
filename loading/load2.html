@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width:600px;
+            height:500px;
+            border:1px solid black;
+            position: relative;
+        }
+        .load{
+            width: 100px;
+            height: 100px;
+            background-color:blue;
+            position:absolute;
+            left:200px;
+            top:200px;
+            -webkit-animation:loading 2s  infinite ease-in-out;
+        }
+        @-webkit-keyframes loading{
+            0%{
+                -webkit-transform:rotateX(0deg);
+
+            }
+            25%{
+                -webkit-transform:rotateX(90deg);
+
+            }
+            50%{
+                -webkit-transform:rotateX(180deg);
+                -webkit-transform:rotateY(0deg);
+            }
+            75%{
+                -webkit-transform:rotateX(180deg);
+                -webkit-transform:rotateY(90deg);
+            }
+            100%{
+                -webkit-transform:rotateX(180deg);
+                -webkit-transform:rotateY(180deg);
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="load"></div>
+</div>
+</body>
+</html>

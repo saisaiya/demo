@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .stage{
+            margin: 300px;
+            height:50px;
+            width:400px;
+        }
+        .div{
+            width:5px;
+            height:25px;
+            background: green;
+            display: inline-block;
+        }
+        .div1{
+
+            -webkit-animation: loading 2s 0s infinite linear;
+        }
+        .div2{
+
+            -webkit-animation: loading 2s 0.3s infinite linear;
+        }
+        .div3{
+
+            -webkit-animation: loading 2s 0.6s infinite linear;
+        }
+        .div4{
+
+            -webkit-animation: loading 2s 0.9s infinite linear;
+        }
+        .div5{
+
+            -webkit-animation: loading 2s 1.2s infinite linear;
+        }
+        @-webkit-keyframes loading {
+            0%,40%,100%{
+                -webkit-transform: scaleY(1.0)
+            }
+
+           20%{
+               -webkit-transform: scaleY(2.2)
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="stage">
+<div class="div div1"></div>
+<div class="div div2"></div>
+<div class="div div3"></div>
+<div class="div div4"></div>
+<div class="div div5"></div>
+</div>
+</body>
+</html>

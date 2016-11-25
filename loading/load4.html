@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 600px;
+            height:500px;
+            position: relative;
+            left:300px;
+            top:50px;
+            border: 1px solid  black;
+        }
+        .div1{
+            width: 50px;
+            height: 50px;
+            background-color: #00cc00;
+            position: absolute;
+            top:100px;
+            left:300px;
+           -webkit-animation:load3 1s infinite ease-in-out;
+        }
+        .div2{
+            width: 50px;
+            height: 50px;
+            background-color: #00cc00;
+            position: absolute;
+            top:200px;
+            left: 200px;
+            -webkit-animation:load4 1s infinite ease-in-out;
+        }
+        @-webkit-keyframes load3 {
+            0%{
+                -webkit-transform: rotate(0deg) scale(0.5);
+                top:100px;
+                left:300px;
+            }
+            50%{
+                -webkit-transform: rotate(-90deg) scale(1);
+                top:200px;
+                left:300px;
+            }
+            100%{
+                -webkit-transform:rotate(-180deg) scale(0.5);
+                top:200px;
+                left:200px;
+            }
+        }
+        @-webkit-keyframes load4 {
+            0%{
+                -webkit-transform: rotate(0deg) scale(0.5);
+                top:200px;
+                left:200px;
+            }
+            50%{
+                -webkit-transform: rotate(-90deg) scale(1);
+                top:100px;
+                left:200px;
+            }
+            100%{
+                -webkit-transform:rotate(-180deg) scale(0.5);
+                top:100px;
+                left:300px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="div1"></div>
+    <div class="div2"></div>
+</div>
+</body>
+</html>

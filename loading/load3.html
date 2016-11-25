@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width:600px;
+            height:500px;
+            border: 1px solid black;
+        }
+        .yuan1{
+            width: 80px;
+            height:80px;
+            border-radius: 50%;
+            background-color: #00cc00;
+            position: absolute;
+            left:200px;
+            top:200px;
+            -webkit-animation: load1 1s 0.1s infinite linear;
+        }
+        .yuan2{
+            width: 40px;
+            height:40px;
+            border-radius: 50%;
+            background-color: #00aa00;
+            position: absolute;
+            left: 220px;
+            top:220px;
+            -webkit-animation: load2 1s 0.1s infinite linear;
+
+        }
+        @-webkit-keyframes load1 {
+            0%{
+                -webkit-transform:scale(0.5);
+            }
+            50%{
+                -webkit-transform:scale(1);
+            }
+            100%{
+                -webkit-transform:scale(0.5);
+            }
+        }
+        @-webkit-keyframes load2 {
+            0%{
+                -webkit-transform:scale(1);
+            }
+            50%{
+                -webkit-transform:scale(0);
+            }
+            100%{
+                -webkit-transform:scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="yuan1"></div>
+    <div class="yuan2"></div>
+</div>
+</body>
+</html>
