@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="input-group">
+                <input type="text" class="form-control" value="无锡">
+                   <span class="input-group-btn">
+                       <button class="btn btn-primary">查询</button>
+                   </span>
+            </div>
+            <div>
+                <div class="city"></div>
+                <div class="temp"></div>
+                <div class="weather"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+        function request(){
+        $.ajax({
+            method:'GET',
+            url:'http://apis.baidu.com/apistore/weatherservice/cityname',
+            data:'cityname='+$(".form-control").val(),
+            dataType:'json',
+            headers:{
+                "apikey":"e53c5f5d0f783e2539ed7ea7e0830f7a"
+           },
+            success:function(data){
+                console.log(data);
+                retData=data.retData;
+                $(".city").html("城市:"+retData.city);
+                $(".temp").html("温度:"+retData.temp);
+                $(".weather").html("天气:"+retData.weather);
+            },
+            fail:function(status){
+                console.log(this,status);
+            }
+        });
+        }
+        $(".btn").click(function(){
+            request();
+        });
+        request();
+
+</script>
+</html>
