@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <style>
+        .panel{
+            margin-top: 60px;
+            padding: 20px;
+            text-align: center;
+        }
+        #subject{
+            margin-bottom: 20px;
+        }
+        .question ul{
+            padding-left: 20px;
+            text-align: left;
+        }
+        .question li{
+            list-style: none;
+            padding: 0;
+        }
+        .question img{
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <select id="subject" class="form-control">
+                    <option value="1">科目一</option>
+                    <option value="4">科目四</option>
+                </select>
+                <button class="btn btn-primary" id="begin">开始考试</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var questions,
+            index = 0,
+            rightAnswers = [],
+            userAnswers = [],
+            score = 0;
+    function request(){
+        $.ajax({
+        method:'GET',
+            url:'http://apis.baidu.com/bbtapi/jztk/jztk_query',
+           data:{
+               "subject":$("#subject").val(),
+               "model":"c1",
+                "testType":"rand",
+           },
+            dataType:'json',
+            headers: {
+                "apikey": 'e53c5f5d0f783e2539ed7ea7e0830f7a'
+            }
+        }).success(function(data){
+            console.log(data);
+            questions=data.result
+            $(".panel").load('questions.html',function(){
+                    $("#prev").click(function(){
+                            if(--index==0){
+                                handleData(questions[index]);
+                            }
+                    });
+                $('#next').click(function(){
+                    if(++index<100){
+                        getChoose();
+                        handleData(questions[index]);
+                    }
+                });
+                $("#submit").click(function(){
+                    getRightAnswer();
+                    checkAnswer();
+                    console.log(score);
+                    alert(score);
+                });
+                handleData(questions[index]);
+            });
+        });
+
+    }
+    function handleData(question){
+        clearChoose();
+        var title=question.question;
+        $(".question h2").html(title);
+        var items=[question.item1,question.item2,question.item3,question.item4];
+        $(".question ul li").each(function(i){
+                if(items[i]==""){
+                        $(this).hide();
+                }else {
+                    $(this).show();
+                    $(this).children("input").val(i+1);
+                    $(this).children("span").html(items[i]);
+                        if(userAnswers[index]!==undefined){
+                            if(i=userAnswers[index]-1){
+                                $(this).children('input').prop("checked",true);
+                            }
+                        }
+
+                }
+
+        });
+        var imgUrl=question.url;
+            if(imgUrl!==""){
+            $(".question img").attr('src',imgUrl);
+            }
+    }
+        function clearChoose(){
+        $('.question ul li input').attr('checked',false);
+        }
+        function getRightAnswer(){
+            questions.forEach(function(e){
+                    rightAnswers.push(e.answer);
+            });
+        }
+    function getChoose(){
+            $('.question ul li input').each(function(i){
+                    var input=$(this)[0];
+                    if($(input).prop('checked')==true){
+                    userAnswers[index-1]=$(this).val();
+                        console.log("choose:"+$(this).val(),index-1,userAnswers);
+                    }
+            });
+    }
+    function checkAnswer(){
+        for(var i=0;i<userAnswers.length;i++){
+            console.log(userAnswers[i],rightAnswers[i]);
+            if(userAnswers[i] == rightAnswers[i]){
+                score++;
+            }
+        }
+    }
+    $("#begin").click(function(){
+        request();
+    })
+</script>
+</body>
+</html>
